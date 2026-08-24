@@ -126,7 +126,7 @@ if FRONTEND_DIST.exists():
 
 @app.get("/{path:path}", include_in_schema=False)
 async def frontend(path: str):
-    if path.startswith("api/"):
+    if path.startswith("api/") or path in {"docs", "redoc", "openapi.json"}:
         raise HTTPException(status_code=404, detail="接口不存在")
     candidate = (FRONTEND_DIST / path).resolve()
     if path and FRONTEND_DIST.resolve() in candidate.parents and candidate.is_file():
