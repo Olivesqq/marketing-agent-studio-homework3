@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: marketing-agent-studio-hw3-wq
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: PUBLIC_DEMO
+        value: "true"
+      - key: REQUIRE_INVITE_CODE
+        value: "true"
+      - key: SESSION_COOKIE_SECURE
+        value: "true"
+      - key: PUBLIC_ORIGIN
+        value: https://marketing-agent-studio-hw3-wq.onrender.com
+      - key: ALLOWED_HOSTS
+        value: marketing-agent-studio-hw3-wq.onrender.com
+      - key: APP_SIGNING_KEY
+        generateValue: true
+      - key: DEMO_ACCESS_CODE
+        sync: false
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "30"
+      - key: MAX_ACTIVE_RUNS_PER_SESSION
+        value: "2"

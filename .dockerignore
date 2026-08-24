@@ -1,0 +1,12 @@
+.git
+.venv
+.env
+.DS_Store
+**/__pycache__
+**/*.pyc
+frontend/node_modules
+frontend/dist
+backend/data/*.db
+backend/data/*.duckdb
+backend/data/*.sqlite3
+output
