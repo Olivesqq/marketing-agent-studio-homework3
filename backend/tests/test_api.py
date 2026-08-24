@@ -1,6 +1,10 @@
+import asyncio
+
+import pytest
+from fastapi import HTTPException
 from fastapi.testclient import TestClient
 
-from app.main import app
+from app.main import app, frontend
 
 
 def test_health_and_public_manifests():
@@ -15,6 +19,13 @@ def test_health_and_public_manifests():
         scenarios = client.get("/api/v1/scenarios").json()["scenarios"]
         assert len(tools) >= 5
         assert {item["id"] for item in scenarios} >= {"churn_recall", "618_streak", "unsafe_sql"}
+
+
+def test_spa_fallback_does_not_mask_disabled_api_docs():
+    for path in ("docs", "redoc", "openapi.json", "api/not-found"):
+        with pytest.raises(HTTPException) as exc_info:
+            asyncio.run(frontend(path))
+        assert exc_info.value.status_code == 404
 
 
 def test_online_mode_requires_temporary_connection():
