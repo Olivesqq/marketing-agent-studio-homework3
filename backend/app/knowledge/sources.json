@@ -1,0 +1,10 @@
+[
+  {"document_id":"01_database_schema","source_id":"internal-schema-v1","title":"营销分析数据库结构","publisher":"项目内部","retrieved_at":"2026-08-09","trust_level":"internal"},
+  {"document_id":"02_metric_definitions","source_id":"internal-metrics-v1","title":"复购率、客单价与流失口径","publisher":"项目内部","retrieved_at":"2026-08-09","trust_level":"internal"},
+  {"document_id":"03_sql_optimization","source_id":"internal-duckdb-v1","title":"DuckDB 查询与优化指南","publisher":"项目内部","retrieved_at":"2026-08-09","trust_level":"internal"},
+  {"document_id":"04_compliance","source_id":"internal-compliance-v1","title":"营销合规与触达频控规则","publisher":"项目内部","retrieved_at":"2026-08-09","trust_level":"internal"},
+  {"document_id":"05_samr_advertising_rules","source_id":"samr-ad-law-2023","title":"互联网广告管理办法与广告合规要点","publisher":"国家市场监督管理总局","url":"https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_d93a579afd45413e8576e4623fab348f.html","published_at":"2023","retrieved_at":"2026-08-09","trust_level":"official"},
+  {"document_id":"06_alibaba_agentic_commerce","source_id":"alibaba-agentic-commerce-2026","title":"淘宝天猫智能化经营与营销公开案例","publisher":"Alibaba Group","url":"https://www.alibabagroup.com/en-US/document-1975267612359131136","published_at":"2026","retrieved_at":"2026-08-09","trust_level":"official"},
+  {"document_id":"07_agno_workflow_hitl","source_id":"agno-workflow-hilt","title":"Agno Workflow 状态与人工审核机制","publisher":"Agno","url":"https://docs.agno.com/workflows/hitl/overview","retrieved_at":"2026-08-09","trust_level":"official"},
+  {"document_id":"08_openai_model_safety","source_id":"openai-model-guide","title":"OpenAI 模型与结构化调用参考","publisher":"OpenAI","url":"https://developers.openai.com/api/docs/models","retrieved_at":"2026-08-09","trust_level":"official"}
+]
